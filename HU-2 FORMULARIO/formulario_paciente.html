@@ -2,24 +2,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Historia Clinica</title>
+    <title>Formulario paciente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <form action="https://www.w3schools.com/action_page.php" method="POST" target="_blank">
+        <link rel="icon" href="IMAGENES/BANNER/hc.png" type="image/png">
         <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body class="cuerpo">
     <br>
-    <div class="container" id="formulario">
-        <h2>Historial médico del paciente</h2>
+    <div class="container" id="datos_generales">
+        <h2 class="titulo_pagina">Historial médico del paciente</h2>
         <br>
-        <h4>Datos Generales del paciente</h4>
+        <h4 class="titulo_dg">Datos Generales del paciente</h4>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="Campos-formulario">
-                <label>Nombres</label>
+                <label for="Nombre">Nombres</label>
                 <input type="text" id="identificacion" name="identificacion" placeholder="Ingrese su nombre">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" id="Campos-formulario">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="Campos-formulario">
                 <label>Apellidos</label>
                 <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese su apellido">
             </div>
@@ -27,378 +28,508 @@
                 <label>Fecha de nacimiento</label>
                 <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/aaaa">
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="container" id="formularioA">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="Campos-Generales">
-                <label>Edad</label>
-                <input type="number" id="edad" name="edad" placeholder="Ingrese su edad">
-            </div>
+            <br>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="campos-Generales">
                 <label>Correo electrónico</label>
                 <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" id="campos-Generales">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="campos-Generales">
                 <label>Dirección</label>
                 <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección">
             </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <label>Nacionalidad</label>
+                <input type="text" id="pais" name="Nacionalidad" placeholder="Ingrese su Nacionalidad">
+            </div>
+            <br>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <label>Idioma</label>
+                <input type="text" id="idioma" name="lenguaje" placeholder="Idioma que habla">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <label for="ips">Entidad promotora de salud</label>
+                <input type="text" id="eps" name="ips" placeholder="eps o seguro social">
+            </div>
+            <br>
+            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12" id="Campos-Generales">
+                <label>Edad</label>
+                <input type="number" id="edad" name="Años" placeholder="Años" min="0" max="120">
+            </div>
+            <br>
+            <div class="container" id="genero">
+                <label>Genero</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Femenino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Otro</label>
+                </div>
+            </div>
+            <br>
+            <div class="container" id="status">
+                <label class="tit_status">Status del paciente</label>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Inactivo</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Activo</label>
+                </div>
+            </div>
+            <br><br>
+            <form id="Preguntas1-2">
+                <br>
+                <div class="container">
+                    <div>
+                        <h3>¿El paciente presenta o ha tenido?</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container" id="repuestas-yn">
+                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1"><b>1. </b>¿Hospitalización por enfermedad o lesión?</label>
+                        </div>
+                    </div>
+                    <div class="container" id="repuestas-yn">
+                        <label><b>2. </b>¿Reacción alérgica a?</label>
+                        <div class="row" id="lista-alegia">
+                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <label class="form-check-label" for="inlineCheckbox1">Aspirina, Ibuprofeno, Acetaminofen, Codeina</label>
+                                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label" for="inlineCheckbox2">Penicilina</label>
+                                <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option2">
+                            </div>
+                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox1">Eritromicina</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option4">
+                                <label class="form-check-label" for="inlineCheckbox2">Tetraciclina</label>
+                            </div>
+                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option5">
+                                <label class="form-check-label" for="inlineCheckbox1">Sulfato</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option6">
+                                <label class="form-check-label" for="inlineCheckbox2">Anestesia local</label>
+                            </div>
+                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option7">
+                                <label class="form-check-label" for="inlineCheckbox1">Fluoruro</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option8">
+                                <label class="form-check-label" for="inlineCheckbox2">Metales (níquel, oro, plata, entre otros)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option9">
+                                <label class="form-check-label" for="inlineCheckbox2">Látex</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form id="preguntas3-51">
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>3. </b>Problemas de corazón, o ataque cardiaco en los últimos 6 meses</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option4">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>4. </b>Historia de endocarditis infecciosa</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>5. </b>válvula cardíaca artificial, reparación del defecto cardíaco (PFO)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option6">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>6. </b>6.	marcapasos o desfibrilador implantable</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option7">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>7. </b>fiebre reumática o escarlatina</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option8">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>8. </b>prótesis artificial (válvula o articulaciones del corazón)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option9">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>9. </b>presión arterial baja o alta</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option10">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>10. </b>Derrame cerebral (Toma anticoagulantes)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option11">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>11. </b>Anemia u otras alteraciones de la sangre</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option12">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>12. </b>Enfisema</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option13">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>13. </b>Dificultad para respirar</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option14">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>14. </b>Sarcoidosis</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option15">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>15. </b>Tuberculosis</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option16">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>16. </b>Sarampión</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option17">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>17. </b>Varicela</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option18">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>18. </b>Asma</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option19">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>19. </b>Problemas de sueño (Apnea de sueño, ronquidos)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option20">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>20. </b>Enfermedades de Renales</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option21">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>21. </b>Enfermedades del hígado</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option22">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>22. </b>¿Ha sido diagnosticado con Covid-19?</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option23">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>23. </b>Ictericia</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option24">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>24. </b>Hipotiroidismo o hipertiroidismo</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option25">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>25. </b>Enfermedad de tiroides o paratiroides</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option26">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>26. </b>Deficiencia de Calcio </label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option27">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>27. </b>Deficiencia hormonal</label>
+                    </div>
+                </div>
+                <div class="container">
+                    <form action="/action_page.php">
+                        <label for="diabetes"><b>26. </b>Diabetes tipo</label>
+                        <input type="text" id="glucosa" name="diabetes" placeholder="1, 2, 3...">
+                    </form>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option29">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>29. </b>Ulcera estomacal o duodenal</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option30">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>30. </b>Desordenes digestivos (Enfermedad celiaca, reflujo gástrico)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option31">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>31. </b>Osteoporosis/Osteopenia (tomando bifosfonatos)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option32">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>32. </b>Artritis, artritis reumatoidea</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option33">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>33. </b>Lupus</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option34">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>34. </b>Glaucoma</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option35">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>35. </b>Lentes de contacto</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option36">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>36. </b>lesión en el cuello o cabeza</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option37">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>37. </b>Epilepsia (convulsiones)</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option38">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>38. </b>desórdenes neurológicos (ADD/ADHD,) enfermedad priónica</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option39">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>39. </b>infecciones virales o herpes labial</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option40">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>40. </b>cualquier bulto o hinchazón en la boca</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option41">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>41. </b>urticaria, erupción cutánea, fiebre del heno</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option42">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>42. </b>ETS, o enfermedades de transmisión sexual</label>
+                    </div>
+                </div>
+                <div class="container">
+                    <form action="/action_page.php">
+                        <label for="hepatico"><b>43. </b>Hepatitis tipo</label>
+                        <input type="text" id="hepatitis" name="hepatico" placeholder="A, B, C...">
+                    </form>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option44">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>44. </b>VIH/SIDA</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option45">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>45. </b>Tumores o crecimientos anomarles</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option46">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>46. </b>Radioterapia</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option47">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>47. </b>Quimioterapia/inmunosupresor</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option48">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>48. </b>Problemas emocionales</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option49">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>49. </b>Tratamiento psiquiátrico</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option50">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>50. </b>Medicación antidepresiva</label>
+                    </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option51">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>51. </b>Exceso de alcohol o de sustancias alucinógenas</label>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-    <br>
-    <div class="container" id="Preguntas1-30">
-        <table>
-            <tr>
-                <th>
-                    <div class="container" id="formulario-radio">
-                        <label>Status del paciente</label>
-                        <br>
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Fallecido</label>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Activo</label>
-                        </div>
+        <form id="preguntas52-63">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h3>¿El paciente está?</h3>
                     </div>
-                    <br>
-                    <div class="container">
-                        <div>
-                            <h3>¿Tiene o ha tenido alguna vez?</h3>
-                        </div>
+                </div>
+                <div class="container">
+                    <form action="/action_page.php">
+                        <label for="tratamineto"><b>52. </b>Actualmente bajo tratamiento por alguna enfermedad:</label>
+                        <input type="text" id="terapia" name="tratamiento" placeholder="Tratamiento">
+                    </form>
+                </div>
+                <div class="container">
+                    <label for="cambios"><b>53. </b>Consciente en un cambio de salud en las últimas 24 horas</label><br>
+                    <form action="/action_page.php" method="get">
+                        <input type="radio" name="sintoma1" value="">
+                        <label for="vehicle1"> Fiebre</label><br>
+                        <input type="radio" name="sintomae2" value=".">
+                        <label for="vehicle2"> Malestar general</label><br>
+                        <input type="radio" name="sintoma3" value="Respiratorio" checked>
+                        <label for="vehicle3"> Tos</label><br>
+                        <input type="radio" name="sintoma4" value="Digestuvo" checked>
+                        <label for="vehicle3"> Dierrea</label><br>
+                    </form>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option54">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>54. </b>Tomando medicación para manejo del peso</label>
                     </div>
-                    <div class="container">
-                        <div class="container" id="repuestas-yn">
-                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1"><b>1. </b>¿Hospitalización por enfermedad o lesión?</label>
-                            </div>
-                        </div>
-                        <div class="container" id="repuestas-yn">
-                            <label><b>2. </b>¿Reacción alérgica a?</label>
-                            <div class="row" id="lista-alegia">
-                                <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">Aspirina, Ibuprofeno, Acetaminofen, Codeina</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Penicilina</label>
-                                </div>
-                                <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">Eritromicina</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Tetraciclina</label>
-                                </div>
-                                <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">Sulfato</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Anestesia local</label>
-                                </div>
-                                <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">Fluoruro</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Metales (níquel, oro, plata, entre otros)</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Látex</label>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option55">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>55. </b>con fatiga o cansancio</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1"><b>3. </b>Problemas de corazón, o ataque cardiaco en los últimos 6 meses</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option56">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>56. </b> con frecuente fatiga o cansancio </label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>4. </b>Historia de endocarditis infecciosa</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option57">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>57. </b>experimentando frecuentemente dolor de cabeza</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>5. </b>válvula cardíaca artificial, reparación del defecto cardíaco (PFO)</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option58">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>58. </b>Fumador, fumador social o fumó tabaco </label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>6. </b>6.	marcapasos o desfibrilador implantable</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option59">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>60. </b>usualmenete desanimado o con depresión</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>7. </b>fiebre reumática o escarlatina</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option61">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>61. </b>tomando métodos anticonceptivos (Mujer)</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>8. </b>prótesis artificial (válvula o articulaciones del corazón)</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option62">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>62. </b>Embarazada</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>9. </b>presión arterial baja o alta</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
+                </div>
+                <div class="container" id="repuestas-yn">
+                    <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option63">
+                        <label class="form-check-label" for="inlineCheckbox1"><b>63. </b>con enfermedades de prostata</label>
                     </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>10. </b>Derrame cerebral (Toma anticoagulantes)</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>11. </b>Anemia u otras alteraciones de la sangre</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>12. </b>Enfisema</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>13. </b>Dificultad para respirar</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>14. </b>Sarcoidosis</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>15. </b>Tuberculosis</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>16. </b>Sarampión</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>17. </b>Varicela</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>18. </b>Asma</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>19. </b>Problemas de sueño (Apnea de sueño, ronquidos)</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>20. </b>Enfermedades de Riñones</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>21. </b>Enfermedades del hígado</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>22. </b>¿Ha sido diagnosticado con Covid-19?</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>23. </b>Ictericia</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>24. </b>Hipotiroidismo o hipertiroidismo</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                    <div class="container" id="repuestas-yn">
-                        <label><b>25. </b>Enfermedad de tiroides o paratiroides</label>
-                        <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                        </div>
-                    </div>
-                </th>
-                <th>
-                    <div class="container" id="preguntas31-63">
-                        <div class="container" id="repuestas-yn">
-                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1"><b>26. </b>Deficiencia de Calcio</label>
-                            </div>
-                        </div>
-                        <div class="container" id="repuestas-yn">
-                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1"><b>27. </b>Deficiencia hormonal</label>
-                            </div>
-                        </div>
-                        <div class="container" id="repuestas-yn">
-                            <label><b>24. </b>Hipotiroidismo o hipertiroidismo</label>
-                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                            </div>
-                        </div>
-                        <div class="container" id="repuestas-yn">
-                            <label><b>25. </b>Enfermedad de tiroides o paratiroides</label>
-                            <div class="form-check form-check-inline" class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Si</label>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-            </tr>
-        </table>
-    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="container">
+            <div class="confirm">
+                <label for="button" class="aceptar">¿Desea guardar los datos en la base datos?</label>
+                <br>
+                <button type="submit" class="btn btn-secondary">Guardar</button>
+                <button type="submit" class="btn btn-secondary">Cancelar</button>
+                <br>
+            </div>
+        </div>
 </body>
 <html>

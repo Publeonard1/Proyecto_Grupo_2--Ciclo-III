@@ -1,6 +1,44 @@
 .cuerpo {
-    background: rgb(105 158 235);
-    color: black;
     border: 80px;
-    font-family: 'Arial Narrow', Tahoma, Verdana, sans-serif;
+    border-radius: 5px;
+    border: black;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(IMAGENES/MAVICON/healthcare.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: x-large;
+}
+
+.titulo_dg {
+    text-align: center;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+    font-display: 'block';
+    font-weight: 600;
+}
+
+.confirm {
+    width: 100%;
+    padding: 10px 20px;
+    backdrop-filter: blur(40px);
+    text-align: center;
+    font-weight: bold;
+    position: sticky;
+}
+
+.titulo_pagina {
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+    font-style: oblique;
+}
+
+.tit_status {
+    text-align: center;
+    color: rgb(112, 79, 201);
+    margin-left: 30px;
 }
