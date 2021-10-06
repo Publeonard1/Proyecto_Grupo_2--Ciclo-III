@@ -1,0 +1,69 @@
+.body_1 {
+    background-image: url(IMAGENES/fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+}
+
+.fila_home {
+    display: flex;
+}
+
+.nombre_entrada {
+    text-align: center;
+    color: #07110f;
+    margin-top: 50px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.h1 {
+    text-align: center;
+    color: rgb(31, 29, 29);
+    margin-top: 250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(138, 202, 240);
+    font-size: 30px;
+}
+
+.h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    color: rgb(148, 193, 196);
+}
+
+.div_posicion_boton {
+    text-align: center;
+    padding-bottom: 10px;
+    position: sticky;
+    display: flow-root;
+}
+
+.tarjeta {
+    border: solid;
+    mask-border-outset: 5px;
+    border: 10px !important;
+    padding: 10px !important;
+    margin: 40px !important;
+    max-width: 410px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    backdrop-filter: blur(80px);
+}
+
+.imagen {
+    max-width: 170px;
+    max-height: 200%;
+    padding-right: 10px;
+    margin: 5px;
+}
+
+.h5 {
+    color: rgb(138, 202, 240);
+}
